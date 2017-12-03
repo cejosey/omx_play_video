@@ -9,13 +9,13 @@ if [ ! -e "$STREAM" ]; then
     mkfifo $STREAM
 fi
 
-youtubecmd="youtube-dl --max-downloads 1 -o /tmp/stream.mpg `xsel -o`"
+youtubecmd="youtube-dl --max-downloads 1 -o - `xsel -o` | buffer > $STREAM"
 
 eval "${youtubecmd}" &
 
 sleep 5
 
-omxplayer /tmp/stream.mpg -b
+omxplayer $STREAM -b
 
 rm "$STREAM"
 
