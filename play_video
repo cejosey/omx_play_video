@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "Playing URL" `xsel -o`
+
+STREAM=/tmp/stream.mpg
+
+if [ ! -e "$STREAM" ]; then
+    echo "creating stream " $STREAM
+    mkfifo $STREAM
+fi
+
+youtubecmd="youtube-dl --max-downloads 1 -o /tmp/stream.mpg `xsel -o`"
+
+eval "${youtubecmd}" &
+
+sleep 5
+
+omxplayer /tmp/stream.mpg -b
+
+rm "$STREAM"
+
+
