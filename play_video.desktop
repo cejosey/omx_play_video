@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Play Video URL
+GenericName=Play Video URL
+Comment=Play a video from the URL in the clipboard
+TryExec=/home/pi/bin/play_video
+Exec=/home/pi/bin/play_video
+Terminal=true
+Type=Application
+Icon=mpv
+StartupNotify=false
