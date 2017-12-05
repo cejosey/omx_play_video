@@ -5,7 +5,7 @@ echo "Playing URL" `xsel -o`
 STREAM=/tmp/stream.mpg
 
 if [ ! -e "$STREAM" ]; then
-    echo "creating stream " $STREAM
+    echo "creating stream" $STREAM
     mkfifo $STREAM
 fi
 
