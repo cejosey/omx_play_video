@@ -1,4 +1,4 @@
-#omx_play_video
+# omx_play_video
 
 I made this little script to play web videos full screen using OMX player on the Raspberry Pi.
 
