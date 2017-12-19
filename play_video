@@ -4,11 +4,13 @@ URL=`xsel -o`
 
 echo "Playing URL" $URL
 
-VURL=`youtube-dl -g $URL`
+VURL=`youtube-dl -g -f mp4 $URL` 
 
 echo $VURL
 
-OMXCMD="omxplayer \"$VURL\""
+OMXCMD="omxplayer -b $VURL"
 
-eval $OMXCMD
+echo $OMXCMD
+
+$OMXCMD
 
