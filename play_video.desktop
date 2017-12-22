@@ -6,5 +6,5 @@ TryExec=/home/pi/bin/play_video
 Exec=/home/pi/bin/play_video
 Terminal=true
 Type=Application
-Icon=mpv
+Icon=gnome-mime-video.png
 StartupNotify=false
