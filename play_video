@@ -4,7 +4,7 @@ URL=`xsel -o`
 
 echo "Playing URL" $URL
 
-VURL=`youtube-dl -g -f mp4 $URL` 
+VURL=`youtube-dl -g -f best $URL` 
 
 echo $VURL
 
